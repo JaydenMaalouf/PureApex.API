@@ -4,7 +4,7 @@
     {
         internal ApexCharacterData() { }
 
-        public ApexLegendsLegendType Type { get; internal set; }
+        public LegendType Type { get; internal set; }
         public int Skin { get; internal set; }
         public int Intro { get; internal set; }
     }

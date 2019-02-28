@@ -1,6 +1,6 @@
-﻿namespace ApexLegendsAPI.Classes
+﻿namespace ApexLegendsAPI
 {
-    public enum ApexLegendsBannerType
+    public enum BannerType
     {
         NONE = 1905735931,
         BANGALORE_WINS_WITH_FULL_SQUAD = 1031439873,

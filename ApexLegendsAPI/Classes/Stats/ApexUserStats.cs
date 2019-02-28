@@ -15,7 +15,7 @@ namespace ApexLegendsAPI.Classes.Stats
         public string Username { get; internal set; }
 
         [JsonProperty("hardware")]
-        public ApexLegendsPlatformType Platform { get; internal set; }
+        public PlatformType Platform { get; internal set; }
 
         [JsonProperty]
         public int Kills { get; internal set; }
@@ -44,7 +44,7 @@ namespace ApexLegendsAPI.Classes.Stats
 #region Character
 
         [JsonProperty("cdata2")]
-        private ApexLegendsLegendType CharacterType { get; set; }
+        private LegendType CharacterType { get; set; }
 
         [JsonProperty("cdata3")]
         private int CharacterSkin { get; set; }
@@ -81,19 +81,19 @@ namespace ApexLegendsAPI.Classes.Stats
         private int BannerBadge3Tier { get; set; }
 
         [JsonProperty("cdata12")]
-        private ApexLegendsBannerType BannerTracker1 { get; set; }
+        private BannerType BannerTracker1 { get; set; }
 
         [JsonProperty("cdata13")]
         private int BannerTracker1Value { get; set; }
 
         [JsonProperty("cdata14")]
-        private ApexLegendsBannerType BannerTracker2 { get; set; }
+        private BannerType BannerTracker2 { get; set; }
 
         [JsonProperty("cdata15")]
         private int BannerTracker2Value { get; set; }
 
         [JsonProperty("cdata16")]
-        private ApexLegendsBannerType BannerTracker3 { get; set; }
+        private BannerType BannerTracker3 { get; set; }
 
         [JsonProperty("cdata17")]
         private int BannerTracker3Value { get; set; }

@@ -7,6 +7,6 @@
         public int Badge { get; internal set; }
         public int BadgeTier { get; internal set; }
         public int TrackerValue { get; internal set; }
-        public ApexLegendsBannerType TrackerType { get; internal set; }
+        public BannerType TrackerType { get; internal set; }
     }
 }

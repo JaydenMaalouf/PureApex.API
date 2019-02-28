@@ -1,6 +1,6 @@
-﻿namespace ApexLegendsAPI.Classes
+﻿namespace ApexLegendsAPI
 {
-    public enum ApexLegendsLegendType
+    public enum LegendType
     {
         CAUSTIC = 1111853120,
         LIFELINE = 1409694078,

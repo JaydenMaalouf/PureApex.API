@@ -10,6 +10,6 @@ namespace ApexLegendsAPI.Interfaces
         string UserId { get; }
         string PersonaId { get; }
 
-        Task<ApexUserStats> GetStatsAsync();
+        Task<ApexUserStats> GetStatsAsync(PlatformType platformType);
     }
 }

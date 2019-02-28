@@ -10,7 +10,6 @@ using Newtonsoft.Json;
 
 using ApexLegendsAPI.Interfaces;
 using ApexLegendsAPI.Classes.Stats;
-using ApexLegendsAPI.Classes.Types;
 
 namespace ApexLegendsAPI
 {
@@ -28,9 +27,9 @@ namespace ApexLegendsAPI
         [XmlElement("personaId")]
         public string PersonaId { get; set; }
                
-        public async Task<ApexUserStats> GetStatsAsync()
+        public async Task<ApexUserStats> GetStatsAsync(PlatformType platformType = PlatformType.PC)
         {
-            var response = await ApexAPI.GetRequestAsync(ApexURLs.STATS_LOOKUP, new KeyValuePair<string, string>("hardware", "PC"), new KeyValuePair<string, string>("uid", UserId));
+            var response = await ApexAPI.GetRequestAsync(ApexURLs.STATS_LOOKUP, new KeyValuePair<string, string>("hardware", platformType.ToString()), new KeyValuePair<string, string>("uid", UserId));
             if (response.StatusCode == HttpStatusCode.OK)
             {
                 var json = await response.Content.ReadAsStringAsync();
@@ -44,7 +43,7 @@ namespace ApexLegendsAPI
             return null;
         }
 
-        public async Task<string> GetAvatarUrlAsync(ApexUserAvatarSizeType sizeType = ApexUserAvatarSizeType.LARGE)
+        public async Task<string> GetAvatarUrlAsync(AvatarSizeType sizeType = AvatarSizeType.LARGE)
         {
             var response = await ApexAPI.GetRequestAsync($"https://api1.origin.com/avatar/user/{UserId}/avatars?size={(int)sizeType}");
             if (response.StatusCode == HttpStatusCode.OK)

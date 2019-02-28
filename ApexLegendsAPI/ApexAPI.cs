@@ -38,26 +38,26 @@ namespace ApexLegendsAPI
         public async Task<bool> LoginAsync()
         {
             var location = await CreateSessionFId();
-            if (!location.IsWellFormedOriginalString())
+            if (location == null || !location.IsWellFormedOriginalString())
             {
                 return false;
             }
 
             location = await CreateJSessionId(location);
-            if (!location.IsWellFormedOriginalString())
+            if (location == null || !location.IsWellFormedOriginalString())
             {
                 return false;
             }
 
             await CreateAuthLogin(location);
             location = await AuthoriseLogin(location);
-            if (!location.IsWellFormedOriginalString())
+            if (location == null || !location.IsWellFormedOriginalString())
             {
                 return false;
             }
 
             location = await CreateSId(location);
-            if (!location.IsWellFormedOriginalString())
+            if (location == null || !location.IsWellFormedOriginalString())
             {
                 return false;
             }
@@ -68,8 +68,8 @@ namespace ApexLegendsAPI
                 return false;
             }
 
-            var result = await GetInternalUser();
-            if (result == false)
+            User = await GetInternalUser();
+            if (User == null)
             {
                 return false;
             }
@@ -268,7 +268,7 @@ namespace ApexLegendsAPI
             return null;
         }
 
-        protected async Task<bool> GetInternalUser()
+        protected async Task<InternalUser> GetInternalUser()
         {
             httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", OAuth.AccessToken);
             var response = await GetRequestAsync(ApexURLs.USER_IDENTITY_LOOKUP);
@@ -277,11 +277,10 @@ namespace ApexLegendsAPI
                 var json = await response.Content.ReadAsStringAsync();
                 if (!string.IsNullOrWhiteSpace(json))
                 {
-                    User = JObject.Parse(json)["pid"].ToObject<InternalUser>();
-                    return true;
+                    return JObject.Parse(json)["pid"].ToObject<InternalUser>();
                 }
             }
-            return false;
+            return null;
         }
     }
 }
