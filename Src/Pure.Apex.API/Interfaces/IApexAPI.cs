@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using System.Collections.Generic;
 
-namespace PureApexAPI.Interfaces
+namespace Pure.Apex.API.Interfaces
 {
     interface IApexAPI
     {

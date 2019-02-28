@@ -6,10 +6,7 @@
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\PureOriginAPI\PureOriginAPI\PureOriginAPI.csproj" />
+    <PackageReference Include="PureOriginAPI" Version="1.0.0" />
   </ItemGroup>
 
 </Project>

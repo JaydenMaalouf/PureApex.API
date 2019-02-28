@@ -6,9 +6,9 @@ using System.Collections.Generic;
 using PureOriginAPI;
 using PureOriginAPI.Extensions;
 
-using PureApexAPI.Classes.Search;
+using Pure.Apex.API.Classes.Search;
 
-namespace PureApexAPI
+namespace Pure.Apex.API
 {
     public class ApexAPI : OriginAPI
     {

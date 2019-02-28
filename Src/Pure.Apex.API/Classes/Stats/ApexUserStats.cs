@@ -2,7 +2,7 @@
 
 using Newtonsoft.Json;
 
-namespace PureApexAPI.Classes.Stats
+namespace Pure.Apex.API.Classes.Stats
 {
     public class ApexUserStats
     {
