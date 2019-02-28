@@ -1,13 +1,13 @@
-# PureApexAPI - C# Apex Legends API
+# PureApex.API - C# Apex Legends API
 A .NET API Wrapper for the Apex Legends API
 Documentation is found below!
 
 ## Installation
 Our stable build is available from NuGet through the ApexAPI metapackage:
-- [PureApexAPI](https://www.nuget.org/packages/PureApexAPI/)
+- [PureApex.API](https://www.nuget.org/packages/PureApex.API/)
 
 ## Getting Started
-Once you have added the NuGet Package to your Project, you will need to add the `using Pure.Apex.API;` to your class header.
+Once you have added the NuGet Package to your Project, you will need to add the `using PureApex.API;` to your class header.
 Then simply instance the ApexAPI class with your Origin Email and Password, like so:
 ```csharp
 var API = new ApexAPI("example@email.com", "password");
