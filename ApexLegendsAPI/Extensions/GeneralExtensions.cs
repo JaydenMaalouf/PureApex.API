@@ -6,12 +6,12 @@ namespace ApexLegendsAPI.Extensions
 {
     internal static class GeneralExtensions
     {
-        internal static string RandomString(int length)
+        public static string RandomString(int length)
         {
             return new string(RandomChars(length).ToArray());
         }
 
-        internal static IEnumerable<char> RandomChars(int amount)
+        public static IEnumerable<char> RandomChars(int amount)
         {
             var rng = new Random();
             var allowedChars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";

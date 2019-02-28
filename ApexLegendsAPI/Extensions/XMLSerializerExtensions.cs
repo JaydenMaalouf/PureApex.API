@@ -6,12 +6,12 @@ namespace ApexLegendsAPI.Extensions
 {
     internal static class XMLSerializerExtensions
     {
-        internal static T XmlDeserializeFromString<T>(string objectData)
+        public static T XmlDeserializeFromString<T>(string objectData)
         {
             return (T)XmlDeserializeFromString(objectData, typeof(T));
         }
 
-        internal static object XmlDeserializeFromString(string objectData, Type type)
+        public static object XmlDeserializeFromString(string objectData, Type type)
         {
             var serializer = new XmlSerializer(type);
             object result;
