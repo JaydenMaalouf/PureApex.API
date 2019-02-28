@@ -10,10 +10,10 @@ using Newtonsoft.Json;
 
 using PureOriginAPI;
 
-using Pure.Apex.API.Interfaces;
-using Pure.Apex.API.Classes.Stats;
+using PureApex.API.Interfaces;
+using PureApex.API.Classes.Stats;
 
-namespace Pure.Apex.API
+namespace PureApex.API
 {
     [XmlRoot(ElementName = "user")]
     public class ApexUser : OriginUser, IApexUser

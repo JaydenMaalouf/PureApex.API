@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 
-using Pure.Apex.API;
+using PureApex.API;
 
 namespace ExampleTest
 {

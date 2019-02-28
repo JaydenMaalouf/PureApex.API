@@ -1,4 +1,4 @@
-﻿namespace Pure.Apex.API.Classes.Stats
+﻿namespace PureApex.API.Classes.Stats
 {
     public class ApexCharacterData
     {

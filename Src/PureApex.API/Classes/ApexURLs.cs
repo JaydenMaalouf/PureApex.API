@@ -1,4 +1,4 @@
-﻿namespace Pure.Apex.API
+﻿namespace PureApex.API
 {
     internal static class ApexURLs
     {

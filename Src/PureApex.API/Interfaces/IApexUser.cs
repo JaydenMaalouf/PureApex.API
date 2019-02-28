@@ -1,8 +1,8 @@
 ﻿using System.Threading.Tasks;
 
-using Pure.Apex.API.Classes.Stats;
+using PureApex.API.Classes.Stats;
 
-namespace Pure.Apex.API.Interfaces
+namespace PureApex.API.Interfaces
 {
     public interface IApexUser
     {

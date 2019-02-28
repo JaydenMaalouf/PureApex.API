@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pure.Apex.API", "Pure.Apex.API\Pure.Apex.API.csproj", "{54F38308-DC5A-463F-84C5-ABF8196E4B71}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PureApex.API", "PureApex.API\PureApex.API.csproj", "{54F38308-DC5A-463F-84C5-ABF8196E4B71}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pure.Apex.API.Tests", "Pure.Apex.API.Tests\Pure.Apex.API.Tests.csproj", "{D47B61FE-B2E1-4D4B-A241-4AB092C957B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PureApex.API.Tests", "PureApex.API.Tests\PureApex.API.Tests.csproj", "{D47B61FE-B2E1-4D4B-A241-4AB092C957B8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
