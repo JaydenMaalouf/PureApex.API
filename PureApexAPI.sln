@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApexLegendsAPI", "ApexLegendsAPI\ApexLegendsAPI.csproj", "{54F38308-DC5A-463F-84C5-ABF8196E4B71}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PureApexAPI", "PureApexAPI\PureApexAPI.csproj", "{54F38308-DC5A-463F-84C5-ABF8196E4B71}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleTest", "ExampleTest\ExampleTest.csproj", "{D47B61FE-B2E1-4D4B-A241-4AB092C957B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExampleTest", "ExampleTest\ExampleTest.csproj", "{D47B61FE-B2E1-4D4B-A241-4AB092C957B8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PureOriginAPI", "..\PureOriginAPI\PureOriginAPI\PureOriginAPI.csproj", "{31EA3F0D-0844-4F1F-BF2F-84F98E5A14D7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{D47B61FE-B2E1-4D4B-A241-4AB092C957B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D47B61FE-B2E1-4D4B-A241-4AB092C957B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D47B61FE-B2E1-4D4B-A241-4AB092C957B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31EA3F0D-0844-4F1F-BF2F-84F98E5A14D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31EA3F0D-0844-4F1F-BF2F-84F98E5A14D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31EA3F0D-0844-4F1F-BF2F-84F98E5A14D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31EA3F0D-0844-4F1F-BF2F-84F98E5A14D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

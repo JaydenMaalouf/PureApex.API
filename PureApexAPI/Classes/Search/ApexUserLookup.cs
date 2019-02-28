@@ -1,7 +1,7 @@
 ﻿using System.Xml.Serialization;
 using System.Collections.Generic;
 
-namespace ApexLegendsAPI.Classes.Search
+namespace PureApexAPI.Classes.Search
 {
     [XmlRoot(ElementName = "users")]
     public class ApexUserLookup

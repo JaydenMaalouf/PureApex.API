@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ApexLegendsAPI\ApexLegendsAPI.csproj" />
+    <ProjectReference Include="..\PureApexAPI\PureApexAPI.csproj" />
   </ItemGroup>
 
 </Project>

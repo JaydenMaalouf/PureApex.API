@@ -1,4 +1,4 @@
-﻿namespace ApexLegendsAPI
+﻿namespace PureApexAPI
 {
     public enum LegendType
     {

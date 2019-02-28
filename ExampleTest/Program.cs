@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 
-using ApexLegendsAPI;
+using PureApexAPI;
 
 namespace ExampleTest
 {
@@ -11,7 +11,7 @@ namespace ExampleTest
         static void Main(string[] args) => new Program().MainAsync().GetAwaiter().GetResult();
         public async Task MainAsync()
         {
-            var api = new ApexAPI("username", "password");
+            var api = new ApexAPI("email", "password");
             var result = await api.LoginAsync();
             if (result)
             {
