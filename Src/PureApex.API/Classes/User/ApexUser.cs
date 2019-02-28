@@ -8,7 +8,7 @@ using System.Collections.Generic;
 
 using Newtonsoft.Json;
 
-using PureOriginAPI;
+using PureOrigin.API;
 
 using PureApex.API.Interfaces;
 using PureApex.API.Classes.Stats;

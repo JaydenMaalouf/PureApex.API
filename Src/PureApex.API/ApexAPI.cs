@@ -3,8 +3,8 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 
-using PureOriginAPI;
-using PureOriginAPI.Extensions;
+using PureOrigin.API;
+using PureOrigin.API.Extensions;
 
 using PureApex.API.Classes.Search;
 

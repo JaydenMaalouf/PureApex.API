@@ -1,11 +1,15 @@
 
-ApexLegendsAPI/bin
+Src/PureApex.API/bin
 
-ApexLegendsAPI/obj
+Src/PureApex.API/obj
 
-ApexLegendsAPI/.vs
+Src/PureApex.API/.vs
 
-/.vs
+Src/PureApex.API.Tests/bin
+
+Src/PureApex.API.Tests/obj
+
+Src/PureApex.API.Tests/.vs
 
 
 ## Ignore Visual Studio temporary files, build results, and
