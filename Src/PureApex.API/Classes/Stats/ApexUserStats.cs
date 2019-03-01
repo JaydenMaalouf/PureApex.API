@@ -2,9 +2,12 @@
 
 using Newtonsoft.Json;
 
+using PureOrigin.API.Extensions;
+using PureOrigin.API.Interfaces;
+
 namespace PureApex.API.Classes.Stats
 {
-    public class ApexUserStats
+    public class ApexUserStats : ISerialisable
     {
         internal ApexUserStats() { }
 
@@ -41,61 +44,76 @@ namespace PureApex.API.Classes.Stats
         [JsonProperty("privacy")]
         public string PartyPrivacy { get; internal set; }
 
-#region Character
-
-        [JsonProperty("cdata2")]
-        private LegendType CharacterType { get; set; }
-
-        [JsonProperty("cdata3")]
-        private int CharacterSkin { get; set; }
-
-        [JsonProperty("cdata18")]
-        private int CharacterIntro { get; set; }
-
-#endregion Character
-
         [JsonProperty("cdata4")]
         public int BannerFrame { get; internal set; }
 
         [JsonProperty("cdata5")]
         public int BannerStance { get; internal set; }
 
+#region Character
+
+        [JsonProperty("cdata2")]
+        [JsonIgnoreSerialisation]
+        private LegendType CharacterType { get; set; }
+
+        [JsonProperty("cdata3")]
+        [JsonIgnoreSerialisation]
+        private int CharacterSkin { get; set; }
+
+        [JsonProperty("cdata18")]
+        [JsonIgnoreSerialisation]
+        private int CharacterIntro { get; set; }
+
+#endregion Character
+
 #region Banners
 
         [JsonProperty("cdata6")]
+        [JsonIgnoreSerialisation]
         private int BannerBadge1 { get; set; }
 
         [JsonProperty("cdata7")]
+        [JsonIgnoreSerialisation]
         private int BannerBadge1Tier { get; set; }
 
         [JsonProperty("cdata8")]
+        [JsonIgnoreSerialisation]
         private int BannerBadge2 { get; set; }
 
         [JsonProperty("cdata9")]
+        [JsonIgnoreSerialisation]
         private int BannerBadge2Tier { get; set; }
 
         [JsonProperty("cdata10")]
+        [JsonIgnoreSerialisation]
         private int BannerBadge3 { get; set; }
 
         [JsonProperty("cdata11")]
+        [JsonIgnoreSerialisation]
         private int BannerBadge3Tier { get; set; }
 
         [JsonProperty("cdata12")]
+        [JsonIgnoreSerialisation]
         private BannerType BannerTracker1 { get; set; }
 
         [JsonProperty("cdata13")]
+        [JsonIgnoreSerialisation]
         private int BannerTracker1Value { get; set; }
 
         [JsonProperty("cdata14")]
+        [JsonIgnoreSerialisation]
         private BannerType BannerTracker2 { get; set; }
 
         [JsonProperty("cdata15")]
+        [JsonIgnoreSerialisation]
         private int BannerTracker2Value { get; set; }
 
         [JsonProperty("cdata16")]
+        [JsonIgnoreSerialisation]
         private BannerType BannerTracker3 { get; set; }
 
         [JsonProperty("cdata17")]
+        [JsonIgnoreSerialisation]
         private int BannerTracker3Value { get; set; }
 
 #endregion Banners
@@ -153,6 +171,11 @@ namespace PureApex.API.Classes.Stats
                 TrackerType = BannerTracker3,
                 TrackerValue = BannerTracker3Value
             };
+        }
+
+        public string Serialize()
+        {
+            return JsonConvert.SerializeObject(this, new JsonSerializerSettings { ContractResolver = new CustomJsonResolver(), Formatting = Formatting.Indented });
         }
     }
 }
