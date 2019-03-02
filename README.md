@@ -12,20 +12,30 @@ Then simply instance the ApexAPI class with your Origin Email and Password, like
 ```csharp
 var API = new ApexAPI("example@email.com", "password");
 ```
-Now you can easily make calls to the API.
+Then login to Origin with the `LoginAsync()` call:
+```csharp
+var result = await API.LoginAsync();
+```
+The `result` boolean will be set to true or false depending on the login success.
+
+#### Now you can easily make calls to the API!
 
 ## GetUserAsync()
 If you already know a user's Guid or Username, you can use the `GetUserAsync()` method to return an `ApexUser` object.
 - Username:
 ```csharp
-var user = API.GetUserAsync("username");
+var user = await API.GetUserAsync("username");
+```
+- UserId:
+```csharp
+var user = await API.GetUserAsync(userId);
 ```
 
 ## GetUsersAsync()
 Same as `GetUserAsync()` but allows to search by generic terms.
 - This will return any users who's username starts with `user`:
 ```csharp
-var users = API.GetUsersAsync("user");
+var users = await API.GetUsersAsync("user");
 ```
   
 ## GetStatsAsync()
@@ -37,4 +47,6 @@ var stats = await user.GetStatsAsync();
 
 **NOTE: THE API WILL ONLY RETURN VALID DATA FOR THE CURRENT ACTIVE LEGEND FOR THE USER**
 
-Thanks for using my wrapper <3 By Kanga#8041
+#### Thanks for using my wrapper ❤️ By Kanga#8041.
+
+**Please note: This API wrapper is for educational purposes only. I am not affiliated with Origin or any of it's entities.**
