@@ -21,7 +21,7 @@ The `result` boolean will be set to true or false depending on the login success
 #### Now you can easily make calls to the API!
 
 ## GetUserAsync()
-If you already know a user's Guid or Username, you can use the `GetUserAsync()` method to return an `ApexUser` object.
+If you already know a user's UserId or Username, you can use the `GetUserAsync()` method to return an `ApexUser` object.
 - Username:
 ```csharp
 var user = await API.GetUserAsync("username");
