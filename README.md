@@ -49,4 +49,4 @@ var stats = await user.GetStatsAsync();
 
 #### Thanks for using my wrapper ❤️ By Kanga#8041.
 
-**Please note: This API wrapper is for educational purposes only. I am not affiliated with Origin or any of it's entities.**
+**Please note: This API wrapper is for educational purposes only. I am not affiliated with Origin, Respawn,  or any of it's entities.**
