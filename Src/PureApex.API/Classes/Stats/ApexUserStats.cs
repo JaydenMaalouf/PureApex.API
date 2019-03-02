@@ -12,7 +12,7 @@ namespace PureApex.API.Classes.Stats
         internal ApexUserStats() { }
 
         [JsonProperty("uid")]
-        public string UserId { get; internal set; }
+        public ulong UserId { get; internal set; }
 
         [JsonProperty("name")]
         public string Username { get; internal set; }
