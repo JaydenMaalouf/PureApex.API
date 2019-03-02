@@ -20,7 +20,7 @@ namespace PureApex.API
     {               
         public async Task<ApexUserStats> GetStatsAsync(PlatformType platformType = PlatformType.PC)
         {
-            var request = ApexAPI.CreateRequest(HttpMethod.Get, ApexURLs.STATS_LOOKUP, new KeyValuePair<string, string>("hardware", platformType.ToString()), new KeyValuePair<string, string>("uid", UserId));
+            var request = ApexAPI.CreateRequest(HttpMethod.Get, ApexURLs.STATS_LOOKUP, new KeyValuePair<string, string>("hardware", platformType.ToString()), new KeyValuePair<string, string>("uid", UserId.ToString()));
             request.Headers.UserAgent.ParseAdd("Respawn HTTPS/1.0");
 
             var response = await ApexAPI.SendAsync(request);

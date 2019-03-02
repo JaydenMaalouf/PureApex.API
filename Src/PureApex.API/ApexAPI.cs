@@ -33,10 +33,11 @@ namespace PureApex.API
             return true;
         }
 
+        public new async Task<ApexUser> GetUserAsync(ulong userId) => await base.GetUserAsync(userId) as ApexUser;
         public new async Task<ApexUser> GetUserAsync(string username, bool explicitUsername = true) => await base.GetUserAsync(username, explicitUsername) as ApexUser;
         public new async Task<IEnumerable<ApexUser>> GetUsersAsync(string username, int count = MAX_USER_SEARCH) => await base.GetUsersAsync(username, count) as IEnumerable<ApexUser>;
 
-        protected override async Task<IEnumerable<OriginUser>> LookupUsersAsync(IEnumerable<string> UserIds)
+        protected override async Task<IEnumerable<OriginUser>> LookupUsersAsync(IEnumerable<ulong> UserIds)
         {
             var request = CreateRequest(HttpMethod.Get, OriginURLs.ORIGIN_USER_ID_SEARCH, new KeyValuePair<string, string>("userIds", string.Join(",", UserIds)));
             var response = await SendAsync(request);
