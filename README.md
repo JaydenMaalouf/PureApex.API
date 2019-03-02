@@ -3,7 +3,7 @@ A .NET API Wrapper for the Apex Legends API
 Documentation is found below!
 
 ## Installation
-Our stable build is available from NuGet through the ApexAPI metapackage:
+Our stable build is available from NuGet through the PureApex.API metapackage:
 - [PureApex.API](https://www.nuget.org/packages/PureApex.API/)
 
 ## Getting Started
@@ -39,9 +39,9 @@ var users = await API.GetUsersAsync("user");
 ```
   
 ## GetStatsAsync()
-If you're wanting to get a user's stats, you can simply use `.GetStatsAsync();` and it will return the requested stats.
+If you're wanting to get a user's stats, you can simply use `GetStatsAsync()` and it will return the requested stats.
 ```csharp
-var user = API.GetUserAsync("username");
+var user = await API.GetUserAsync("username");
 var stats = await user.GetStatsAsync();
 ```
 
