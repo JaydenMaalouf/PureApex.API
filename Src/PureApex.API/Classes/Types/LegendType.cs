@@ -8,7 +8,7 @@
         GIBRALTAR = 182221730,
         MIRAGE = 2045656322,
         BANGALORE = 725342087,
-        WRAIT = 827049897,
+        WRAITH = 827049897,
         BLOODHOUND = 898565421
     }  
 }
